@@ -1,5 +1,75 @@
-html, 
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =========
+CONTAINER LAYOUT 
+============*/
+
+.container {
+  display: grid;
+  grid-template-columns: 1.25em 1fr 1.25em;
+  grid-template-areas: ".... head ....";
+
+  max-width: 1085px;
+  margin: 0 auto;
+}
+
+/* ==========
+HEADER styles 
+============*/
+.header {
+  grid-area: head;
+  display: flex;
+  align-items: center;
+  gap: 1.875em; /* 30px */
+
+  padding-top: 1.375em; /* 22px / 16px === 1.375em */
+  padding-bottom: 1.375em; /* 22px / 16px === 1.375em */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.1875em; /* 3px */
+}
+
+.logo-img {
+  width: 23px;
+  height: 23px;
+}
+
+.logo-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem; /* 14px / 16px = 0.875rem */
+
+  color: #0e0e0e;
+}
+
+.home-link {
+  margin-left: auto;
+}
+
+.home-link,
+.about-me-link {
+  font-weight: 600;
+  font-size: 0.75rem; /* 12px / 16px = 0.75rem */
+  color: #090909;
 }
