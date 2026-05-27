@@ -16,6 +16,12 @@ body {
 
 a {
   text-decoration: none;
+  color: #ffffff;
+}
+
+article {
+  padding-left: 1.25em; /* 20px */
+  padding-right: 1.25em;
 }
 
 /* =========
@@ -25,7 +31,9 @@ CONTAINER LAYOUT
 .container {
   display: grid;
   grid-template-columns: 1.25em 1fr 1.25em;
-  grid-template-areas: ".... head ....";
+  grid-template-areas:
+    ".... head ...."
+    "main main main";
 
   max-width: 1085px;
   margin: 0 auto;
@@ -72,4 +80,55 @@ HEADER styles
   font-weight: 600;
   font-size: 0.75rem; /* 12px / 16px = 0.75rem */
   color: #090909;
+}
+
+/* ==========
+MAIN ELEMENT styles 
+============*/
+.main {
+  grid-area: main;
+}
+
+/* ==========
+HERO article styles 
+============*/
+.hero-section {
+  background-image: url("/images/article-image-hero.png");
+  background-repeat: no-repeat;
+  /* background-position: center center; */
+  background-position: right;
+  background-size: cover;
+}
+
+.hero-section {
+  color: #ffffff;
+}
+
+.hero-article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em; /* 8px */
+
+  padding-top: 5.4375em; /* 87px / 16px = 5.438em */
+  padding-bottom: 1.5625em; /* 25px / 16px = 1.5625em */
+}
+
+.hero-article-date {
+  order: -1;
+  font-size: 0.75rem; /* 12px */
+  line-height: 100%;
+  opacity: 0.8;
+}
+
+.hero-article-title {
+  font-size: 2rem; /* 32px */
+  line-height: 108%;
+  letter-spacing: -3%;
+}
+
+.hero-article-preview {
+  font-size: 1rem; /* 14.4px */
+  opacity: 0.9;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
 }
