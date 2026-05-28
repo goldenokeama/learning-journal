@@ -33,6 +33,9 @@ CONTAINER LAYOUT
   grid-template-columns: 1.25em 1fr 1.25em;
   grid-template-areas:
     ".... head ...."
+    "main main main"
+    "main main main"
+    "main main main"
     "main main main";
 
   max-width: 1085px;
@@ -95,12 +98,10 @@ HERO article styles
 .hero-section {
   background-image: url("/images/article-image-hero.png");
   background-repeat: no-repeat;
-  /* background-position: center center; */
+
   background-position: right;
   background-size: cover;
-}
-
-.hero-section {
+  min-height: 293px;
   color: #ffffff;
 }
 
@@ -131,4 +132,65 @@ HERO article styles
   opacity: 0.9;
   line-height: 1.4;
   letter-spacing: 0.3px;
+}
+
+/* ==========
+article list styles 
+============*/
+
+.article-list-section {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2.125em; /* 34px */
+  margin-bottom: 1.6875em; /* 27px */
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.5625em; /* 41px */
+}
+
+.article-img {
+  width: 100%;
+  display: block;
+  margin-bottom: 0.875em; /* 14px */
+}
+
+.article-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5625em; /* 9px */
+}
+
+.article-date {
+  order: -1;
+}
+
+.article-title > a {
+  color: #141414;
+}
+
+.article-preview {
+  color: #505050;
+  line-height: 125%;
+}
+
+.view-more-btn-container {
+  padding-left: 1.25em; /* 20px */
+  padding-right: 1.25em;
+
+  margin-bottom: 2.6875em; /* 43px */
+}
+
+.view-more-btn {
+  display: block;
+  background: transparent;
+  border: none;
+  text-decoration: underline;
+  margin: 0 auto;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 100%;
+  cursor: pointer;
 }
