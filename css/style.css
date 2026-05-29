@@ -36,7 +36,8 @@ CONTAINER LAYOUT
     "main main main"
     "main main main"
     "main main main"
-    "main main main";
+    "main main main"
+    ".... foot ....";
 
   max-width: 1085px;
   margin: 0 auto;
@@ -74,7 +75,7 @@ HEADER styles
   color: #0e0e0e;
 }
 
-.home-link {
+.nav {
   margin-left: auto;
 }
 
@@ -138,7 +139,7 @@ HERO article styles
 article list styles 
 ============*/
 
-.article-list-section {
+.article-list {
   list-style: none;
   padding-left: 0;
   margin-top: 2.125em; /* 34px */
@@ -193,4 +194,31 @@ article list styles
   font-size: 1rem;
   line-height: 100%;
   cursor: pointer;
+}
+
+/* ==========
+Footer styles 
+============*/
+footer {
+  grid-area: foot;
+  background: #202020;
+  padding-top: 2.3125em; /* 37px / 16px */
+  padding-bottom: 2.3125em; /* 37px / 16px */
+
+  text-align: center;
+}
+
+footer > .footer-top-text {
+  color: #ececec;
+  font-size: 0.75rem; /* 12px */
+  font-weight: 700;
+  line-height: 108%;
+  letter-spacing: -3%;
+  margin-bottom: 0.25em; /* 3px / 12px == 0.25em */
+}
+
+footer > .footer-copyright {
+  color: #d7d7d7;
+  font-size: 0.75rem; /* 12px */
+  line-height: 125%;
 }
