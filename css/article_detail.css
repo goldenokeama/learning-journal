@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* =========
+CONTAINER LAYOUT 
+============*/
+
+.container {
+  display: grid;
+  grid-template-columns: 1.25em 1fr 1.25em;
+
+  grid-template-areas:
+    ".... head ...."
+    ".... main ...."
+    ".... foot ....";
+
+  max-width: 1085px;
+  margin: 0 auto;
+}
+
+/* ==========
+HEADER styles 
+============*/
+.header {
+  grid-area: head;
+  display: flex;
+  align-items: center;
+  gap: 1.875em; /* 30px */
+
+  padding-top: 1.375em; /* 22px / 16px === 1.375em */
+  padding-bottom: 1.375em; /* 22px / 16px === 1.375em */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.1875em; /* 3px */
+}
+
+.logo-img {
+  width: 23px;
+  height: 23px;
+}
+
+.logo-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem; /* 14px / 16px = 0.875rem */
+
+  color: #0e0e0e;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.home-link,
+.about-me-link {
+  font-weight: 600;
+  font-size: 0.75rem; /* 12px / 16px = 0.75rem */
+  color: #090909;
+}
+
+.current-link {
+  border-bottom: 2px solid #0e0e0e;
+}
+
+main {
+  grid-area: main;
+}
+
+.main-article-image {
+  width: 100%;
+}
+
+/* ==========
+article list styles 
+============*/
+.article-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2.125em; /* 34px */
+  margin-bottom: 1.6875em; /* 27px */
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.5625em; /* 41px */
+}
+
+.article-img {
+  width: 100%;
+  display: block;
+  margin-bottom: 0.875em; /* 14px */
+}
+
+.article-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5625em; /* 9px */
+}
+
+.article-date {
+  order: -1;
+}
+
+.article-title > a {
+  color: #141414;
+}
+
+.article-preview {
+  color: #505050;
+  line-height: 125%;
+}
+
+/* ==========
+Footer styles 
+============*/
+footer {
+  grid-area: foot;
+  background: #202020;
+  padding-top: 2.3125em; /* 37px / 16px */
+  padding-bottom: 2.3125em; /* 37px / 16px */
+
+  text-align: center;
+}
+
+footer > .footer-top-text {
+  color: #ececec;
+  font-size: 0.75rem; /* 12px */
+  font-weight: 700;
+  line-height: 108%;
+  letter-spacing: -3%;
+  margin-bottom: 0.25em; /* 3px / 12px == 0.25em */
+}
+
+footer > .footer-copyright {
+  color: #d7d7d7;
+  font-size: 0.75rem; /* 12px */
+  line-height: 125%;
+}

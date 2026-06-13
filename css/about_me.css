@@ -19,11 +19,6 @@ a {
   color: #ffffff;
 }
 
-article {
-  padding-left: 1.25em; /* 20px */
-  padding-right: 1.25em;
-}
-
 /* =========
 CONTAINER LAYOUT 
 ============*/
@@ -31,12 +26,10 @@ CONTAINER LAYOUT
 .container {
   display: grid;
   grid-template-columns: 1.25em 1fr 1.25em;
+
   grid-template-areas:
     ".... head ...."
-    "main main main"
-    "main main main"
-    "main main main"
-    "main main main"
+    ".... main ...."
     ".... foot ....";
 
   max-width: 1085px;
@@ -86,59 +79,22 @@ HEADER styles
   color: #090909;
 }
 
-/* ==========
-MAIN ELEMENT styles 
-============*/
-.main {
+.current-link {
+  border-bottom: 2px solid #0e0e0e;
+}
+
+main {
   grid-area: main;
 }
 
-/* ==========
-HERO article styles 
-============*/
-.hero-section {
-  background-image: url("/images/article-image-hero.png");
-  background-repeat: no-repeat;
-
-  background-position: right;
-  background-size: cover;
-  min-height: 293px;
-  color: #ffffff;
-}
-
-.hero-article {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em; /* 8px */
-
-  padding-top: 5.4375em; /* 87px / 16px = 5.438em */
-  padding-bottom: 1.5625em; /* 25px / 16px = 1.5625em */
-}
-
-.hero-article-date {
-  order: -1;
-  font-size: 0.75rem; /* 12px */
-  line-height: 100%;
-  opacity: 0.8;
-}
-
-.hero-article-title {
-  font-size: 2rem; /* 32px */
-  line-height: 108%;
-  letter-spacing: -3%;
-}
-
-.hero-article-preview {
-  font-size: 1rem; /* 14.4px */
-  opacity: 0.9;
-  line-height: 1.4;
-  letter-spacing: 0.3px;
+.profile-pic {
+  width: 182px;
+  border-radius: 50%;
 }
 
 /* ==========
 article list styles 
 ============*/
-
 .article-list {
   list-style: none;
   padding-left: 0;
@@ -173,27 +129,6 @@ article list styles
 .article-preview {
   color: #505050;
   line-height: 125%;
-}
-
-.view-more-btn-container {
-  padding-left: 1.25em; /* 20px */
-  padding-right: 1.25em;
-
-  margin-bottom: 2.6875em; /* 43px */
-}
-
-.view-more-btn {
-  display: block;
-  background: transparent;
-  border: none;
-  text-decoration: underline;
-  margin: 0 auto;
-
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 100%;
-  cursor: pointer;
 }
 
 /* ==========
